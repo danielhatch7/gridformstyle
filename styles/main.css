@@ -696,12 +696,12 @@ input[type="radio"]:checked::after {
     justify-self: end;
   }
 
-  label[for="haiku"] {
+  label[for="explanation"] {
     justify-self: start;
   }
 
   fieldset,
-  label[for="haiku"],
+  label[for="explanation"],
   textarea,
   button {
     grid-column: 2;
