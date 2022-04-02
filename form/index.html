@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a the form page for my incredible website.">
+
+    <!--styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Rowdies&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
+
+
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./../favicon-16x16.png">
+    <link rel="manifest" href="./../site.webmanifest">
+    <link rel="mask-icon" href="./../safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./../favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Might want to change this title later. -->
+    <title>Form</title>
+</head>
+
+<body class="form-page">
+
+    <header class="navbar">
+        <div class="menu-icon">
+            <svg viewbox="0 0 60 60" width="55px" height="55px">
+                <line x1="5%" y1="50%" x2="95%" y2="50%" />
+                <line x1="5%" y1="50%" x2="95%" y2="50%" />
+                <line x1="5%" y1="50%" x2="95%" y2="50%" />
+            </svg>
+        </div>
+        <div class="space-filler">
+            <p>.</p>
+        </div>
+        <nav class="page-links">
+            <ul class="navbutton">
+                <li><a href="../">Home</a></li>
+                <li><a href="../about/">About</a></li>
+                <li><a class="current-page">Form</a></li>
+            </ul>
+        </nav>
+        <div class="menu-logo">
+            <!--<p>Potential logo</p>-->
+            <img src="../images/Cartoon_space_rocket.png" alt="rocket" width="40px" height="40px">
+        </div>
+    </header>
+
+    <main>
+        <h1>Form</h1>
+
+        <div class="form-formatting">
+            <div class="form-img">
+                <img src="../images/cplusplus.svg" alt="c plus plus icon">
+            </div>
+
+            <form>
+                <label for="name">Full name:</label>
+
+                <input type="text" name="name" id="name">
+
+                <label for="email">Email address:</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="phone">Phone number:</label>
+                <input type="tel" name="phone" id="phone">
+
+                <label for="month">Your favorite month:</label>
+                <input type="month" name="month" id="month">
+
+                <fieldset>
+                    <legend>Which of the following would you guess are ingredients of Vegemite? <em>(Check all that
+                            apply)</em></legend>
+
+                    <input type="checkbox" id="wombat" name="ingredients" value="wombat">
+                    <label for="wombat">Wombat</label>
+
+                    <input type="checkbox" id="kiwi-feet" name="ingredients" value="kiwi-feet">
+                    <label for="kiwi-feet">Dried kiwi feet</label>
+
+                    <input type="checkbox" id="eucalyptus" name="ingredients" value="eucalyptus">
+                    <label for="eucalyptus">Eucalyptus tincture</label>
+
+                    <input type="checkbox" id="emu" name="ingredients" value="emu">
+                    <label for="emu">Emu oil</label>
+
+                    <input type="checkbox" id="kanga" name="ingredients" value="kanga-claw">
+                    <label for="kanga">Kangaroo claw</label>
+
+                    <input type="checkbox" id="platy" name="ingredients" value="platypus-liver">
+                    <label for="platy">Platypus liver</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>How would you describe the taste of Vegemite?</legend>
+
+                    <input type="radio" name="taste" id="asphalt" value="asphalt">
+                    <label for="asphalt">Powdered asphalt</label>
+
+                    <input type="radio" name="taste" id="tar" value="tar">
+                    <label for="tar">Lukewarm tar</label>
+
+                    <input type="radio" name="taste" id="salt" value="salty">
+                    <label for="salt">Salty</label>
+
+                    <input type="radio" name="taste" id="delicious" value="delicious">
+                    <label for="delicious">Amazeballs</label>
+                </fieldset>
+
+                <label for="haiku">Compose a haiku about Vegemite:</label>
+                <textarea name="haiku" id="haiku" rows="10" placeholder="5/7/5 syllable count"></textarea>
+
+                <button class="button">Submit Now</button>
+
+            </form>
+
+        </div>
+
+        <div class="loader-wrapper">
+            <div class="loader"></div>
+        </div>
+    </main>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            document.querySelector(".menu-icon").addEventListener("click", () => {
+                document.querySelector(".navbar").classList.toggle("menu-show");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
